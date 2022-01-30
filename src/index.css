@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 12px;
+  background-color: #f2fbfd;
 }
 input {
   font-size: 10px;
@@ -18,4 +19,9 @@ input {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+html {
+  font-family: Open Sans, "Helvetica", "Arial", sans-serif;
+  color: #252525;
 }

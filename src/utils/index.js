@@ -1,3 +1,5 @@
+const _currentYear = new Date().getFullYear();
+
 export const SORTING_ORDERS = {
   ASCENDING: "ascending",
   DESCENDING: "descending",
@@ -24,22 +26,14 @@ export const sortArr = (arr, accessor, order) => {
   if (order === SORTING_ORDERS.NONE) return arr;
 
   let sortDsc = (a, b) => {
-    if (a[accessor] < b[accessor]) {
-      return 1;
-    }
-    if (a[accessor] > b[accessor]) {
-      return -1;
-    }
+    if (a[accessor] < b[accessor]) return 1;
+    if (a[accessor] > b[accessor]) return -1;
     return 0;
   };
 
   let sortAsc = (a, b) => {
-    if (a[accessor] < b[accessor]) {
-      return -1;
-    }
-    if (a[accessor] > b[accessor]) {
-      return 1;
-    }
+    if (a[accessor] < b[accessor]) return -1;
+    if (a[accessor] > b[accessor]) return 1;
     return 0;
   };
 
@@ -56,3 +50,8 @@ export const getQueryParams = (name) => {
   const urlSearchParams = new URLSearchParams(window.location.search);
   return urlSearchParams.get(name);
 };
+
+export function _calculateAge(birthday) {
+  const year = birthday.split("-")[0];
+  return Math.abs(year - _currentYear);
+}

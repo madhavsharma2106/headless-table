@@ -1,7 +1,8 @@
-import { useTable } from "./useTable";
-import { getQueryParams, ICONS } from "./utils";
+import { useTable } from "../../hooks/useTable";
+import { getQueryParams, ICONS } from "../../utils";
 
-export const Table = ({ columns, data }) => {
+export const Table = ({ columns, resource }) => {
+  const { data } = resource.read();
   const { headers, rows } = useTable({ columns, data });
 
   const renderRows = () => {
@@ -18,8 +19,8 @@ export const Table = ({ columns, data }) => {
 
   const renderSortingIcon = (header) => {
     const sortBy = getQueryParams("sortBy");
-    if (!sortBy) return;
-    if (sortBy !== header.accessor) return null;
+    if (!sortBy || sortBy !== header.accessor) return;
+
     return ICONS[getQueryParams("order")];
   };
 

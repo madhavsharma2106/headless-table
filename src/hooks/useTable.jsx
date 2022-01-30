@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
-import { getQueryParams, searchArr, sortArr, sortingOrder } from "./utils";
+import { getQueryParams, searchArr, sortArr, sortingOrder } from "../utils";
 
 export const useTable = ({ data, columns }) => {
   const _prepareHeaders = (columns) => {

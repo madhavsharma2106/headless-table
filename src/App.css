@@ -19,3 +19,11 @@ td {
   padding: 2px;
   text-align: center;
 }
+
+tbody {
+  background-color: white;
+}
+
+thead {
+  background-color: white;
+}
