@@ -1,10 +1,8 @@
 import { useTable } from "../../hooks/useTable";
 import { getSortingIcon } from "../../utils";
-import { tableData } from "../../utils/mockdata";
 
 export const Table = ({ columns, resource }) => {
   const { data } = resource.read();
-  // const data = tableData;
   const { headers, rows } = useTable({ columns, data });
 
 

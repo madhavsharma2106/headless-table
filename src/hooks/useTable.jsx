@@ -133,7 +133,6 @@ export const useTable = ({ data, columns }) => {
   useEffect(() => {
     _sortColumn();
     _filterRows();
-    console.log("useEffect")
   }, [location]);
 
   
