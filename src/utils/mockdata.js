@@ -2000,3 +2000,218 @@ export const tableData = [
     status: "rejected",
   },
 ];
+
+export const dummyHeaders = [
+  {
+      "header": "Name",
+      "accessor": "name",
+      "searchable": true
+  },
+  {
+      "header": "Email",
+      "accessor": "email"
+  },
+  {
+      "header": "Age",
+      "accessor": "birth_date"
+  },
+  {
+      "header": "Years of experience",
+      "accessor": "year_of_experience",
+      "sortable": true
+  },
+  {
+      "header": "Position Applied",
+      "accessor": "position_applied",
+      "searchable": true,
+      "sortable": true
+  },
+  {
+      "header": "Applied",
+      "accessor": "application_date",
+      "sortable": true
+  },
+  {
+      "header": "Status",
+      "accessor": "status",
+      "searchable": true
+  }
+]
+
+export const dummyRows = [
+  {
+      "cells": [
+          {
+              "value": "Alvin Satterfield"
+          },
+          {
+              "value": "cornellbartell@connellyleannon.biz"
+          },
+          {
+              "value": 25
+          },
+          {
+              "value": 5
+          },
+          {
+              "value": "Technician"
+          },
+          {
+              "value": "2018-07-02"
+          },
+          {
+              "value": "rejected"
+          }
+      ],
+      "original": {
+          "id": 1,
+          "name": "Alvin Satterfield",
+          "email": "cornellbartell@connellyleannon.biz",
+          "birth_date": "1997-09-07",
+          "year_of_experience": 5,
+          "position_applied": "Technician",
+          "application_date": "2018-07-02",
+          "status": "rejected"
+      }
+  },
+  {
+      "cells": [
+          {
+              "value": "Colette Morar"
+          },
+          {
+              "value": "corinnestark@pacocha.co"
+          },
+          {
+              "value": 24
+          },
+          {
+              "value": 3
+          },
+          {
+              "value": "Designer"
+          },
+          {
+              "value": "2017-11-18"
+          },
+          {
+              "value": "waiting"
+          }
+      ],
+      "original": {
+          "id": 2,
+          "name": "Colette Morar",
+          "email": "corinnestark@pacocha.co",
+          "birth_date": "1998-08-03",
+          "year_of_experience": 3,
+          "position_applied": "Designer",
+          "application_date": "2017-11-18",
+          "status": "waiting"
+      }
+  },
+  {
+      "cells": [
+          {
+              "value": "Rosalind Rath DDS"
+          },
+          {
+              "value": "sandyankunding@marks.io"
+          },
+          {
+              "value": 42
+          },
+          {
+              "value": 15
+          },
+          {
+              "value": "Orchestrator"
+          },
+          {
+              "value": "2018-01-31"
+          },
+          {
+              "value": "approved"
+          }
+      ],
+      "original": {
+          "id": 3,
+          "name": "Rosalind Rath DDS",
+          "email": "sandyankunding@marks.io",
+          "birth_date": "1980-03-28",
+          "year_of_experience": 15,
+          "position_applied": "Orchestrator",
+          "application_date": "2018-01-31",
+          "status": "approved"
+      }
+  },
+  {
+      "cells": [
+          {
+              "value": "Cyrstal Kunze"
+          },
+          {
+              "value": "lavernokon@stroman.name"
+          },
+          {
+              "value": 25
+          },
+          {
+              "value": 8
+          },
+          {
+              "value": "Analyst"
+          },
+          {
+              "value": "2018-09-12"
+          },
+          {
+              "value": "rejected"
+          }
+      ],
+      "original": {
+          "id": 4,
+          "name": "Cyrstal Kunze",
+          "email": "lavernokon@stroman.name",
+          "birth_date": "1997-10-30",
+          "year_of_experience": 8,
+          "position_applied": "Analyst",
+          "application_date": "2018-09-12",
+          "status": "rejected"
+      }
+  },
+  {
+      "cells": [
+          {
+              "value": "Henrietta Fisher V"
+          },
+          {
+              "value": "lewis@sipes.biz"
+          },
+          {
+              "value": 48
+          },
+          {
+              "value": 14
+          },
+          {
+              "value": "Producer"
+          },
+          {
+              "value": "2018-04-25"
+          },
+          {
+              "value": "waiting"
+          }
+      ],
+      "original": {
+          "id": 5,
+          "name": "Henrietta Fisher V",
+          "email": "lewis@sipes.biz",
+          "birth_date": "1974-09-14",
+          "year_of_experience": 14,
+          "position_applied": "Producer",
+          "application_date": "2018-04-25",
+          "status": "waiting"
+      }
+  }
+]
