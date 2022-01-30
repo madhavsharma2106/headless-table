@@ -1,4 +1,3 @@
-import { tableData } from "../../utils/mockdata";
 import { ErrorBoundary, Table } from "../../shared-components";
 import { _calculateAge } from "../../utils";
 import { Suspense } from "react";
@@ -43,9 +42,8 @@ const columns = [
 ];
 
 export const Candidates = () => {
-  //   const data = tableData.slice(0, 5);
   const resource = CandidateService.getAllCandidates();
-
+  
   return (
     <ErrorBoundary>
       <Suspense fallback={<div>Loading ...</div>}>

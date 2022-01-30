@@ -22,8 +22,8 @@ const request = async ({ method, url, body, options }) => {
 
     try {
       const response = await fetch(url, reqOptions);
-      const data = await response.json();
-
+      const data =await response.json();
+      if(data.error) reject(data.error.message)
       resolve(data);
     } catch (err) {
       reject(err);

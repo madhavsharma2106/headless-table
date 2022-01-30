@@ -113,8 +113,8 @@ export const useTable = ({ data, columns }) => {
   };
 
   const _updateQueryParams = (queryParams) => {
-    let pathname = location.pathname;
-    let searchParams = new URLSearchParams(location.search);
+    let pathname = window.location.pathname;
+    let searchParams = new URLSearchParams(window.location.search);
     for (let name in queryParams) {
       searchParams.set(name, queryParams[name]);
     }
@@ -126,13 +126,17 @@ export const useTable = ({ data, columns }) => {
 
   const [headers, setHeaders] = useState(_prepareHeaders(columns));
   const [rows, setRows] = useState(_prepareRows(data, headers));
-  const history = useHistory();
-  const location = useLocation();
 
-  console.log({ headers, rows });
+  const history = useHistory();
+  const location = useLocation()
+
   useEffect(() => {
     _sortColumn();
     _filterRows();
+    console.log("useEffect")
   }, [location]);
+
+  
+
   return { headers, rows };
 };

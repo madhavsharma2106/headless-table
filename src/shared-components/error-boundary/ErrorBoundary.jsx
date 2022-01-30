@@ -3,7 +3,7 @@ import { Component } from "react";
 export class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    this.state = { hasError: false };
+    this.state = { hasError: false, error: "Oops! Something went wrong." };
   }
 
   static getDerivedStateFromError(error) {
@@ -12,14 +12,14 @@ export class ErrorBoundary extends Component {
   }
 
   componentDidCatch(error, errorInfo) {
-    // You can also log the error to an error reporting service
+    // Ideally would log the error to an error reporting service
     console.log({ error, errorInfo });
+    this.setState({error})
   }
 
   render() {
     if (this.state.hasError) {
-      // You can render any custom fallback UI
-      return <h1>Something went wrong.</h1>;
+      return <h1>{this.state.error}</h1>;
     }
 
     return this.props.children;

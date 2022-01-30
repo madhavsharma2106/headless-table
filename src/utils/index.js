@@ -17,8 +17,8 @@ export const sortingOrder = (order) => {
 };
 
 export const ICONS = {
-  [SORTING_ORDERS.ASCENDING]: " 🔼",
-  [SORTING_ORDERS.DESCENDING]: " 🔽",
+  [SORTING_ORDERS.ASCENDING]: "🔼",
+  [SORTING_ORDERS.DESCENDING]: "🔽",
   [SORTING_ORDERS.NONE]: null,
 };
 
@@ -55,3 +55,10 @@ export function _calculateAge(birthday) {
   const year = birthday.split("-")[0];
   return Math.abs(year - _currentYear);
 }
+
+
+export const  getSortingIcon = (accessor) => {
+  const sortBy = getQueryParams("sortBy");
+  if (sortBy !== accessor) return;
+  return ICONS[getQueryParams("order")] || null;
+};
